@@ -13,7 +13,7 @@ const ProductContent = ({ product, updateItemCount }:{product:any, updateItemCou
 
   return (
     <>
-      {product && <div style={ {paddingBottom: "95px", minHeight: portrait? undefined: "calc(100vh - 55px)", display: "flex", } }>
+      {product && <div style={ {paddingBottom: "95px", minHeight: portrait? undefined: "calc(100vh - 50px)", display: "flex", } }>
         <div style={ {minHeight: "calc(100vh - 150px)", display:"flex" ,flexDirection: portrait ? "column" : "row", justifyContent:"space-between", flex:1}}>  
           {/* eslint-disable-next-line @next/next/no-img-element*/}
           <img alt = {product.attributes.name} src={ product.attributes.image } style={ { maxHeight: portrait? "70vh":undefined, height: portrait ? "auto" : "100%", objectFit: "cover", maxWidth: portrait ? "100%" : "50%" } }>
