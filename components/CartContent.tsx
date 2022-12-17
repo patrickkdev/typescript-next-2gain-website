@@ -23,7 +23,7 @@ const CartContent = ({itemsInCart, updateCartItems}:{itemsInCart:any[], updateCa
 
     return (
         <div>
-            {itemsInCart && <Paper elevation={5} style={{display:"flex", flexDirection: portrait? "column":"row", minHeight: "calc(100vh - 60px)",}}>
+            {itemsInCart && <Paper elevation={5} style={{display:"flex", flexDirection: portrait? "column":"row", minHeight: "calc(100vh - 55px)",}}>
                 <div style = {{
                         flex:1,
                         padding: "10px",

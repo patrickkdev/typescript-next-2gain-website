@@ -18,7 +18,7 @@ const HomeContent = ({ products, updateItemCount }: { products: [any], updateIte
     }
 
     return (
-        <main style={ { minHeight: "calc(100vh - 200px)", overflow: "hidden", display: "block", position: "relative", paddingBottom:"100px"} }>
+        <main style={ { minHeight: "calc(100vh - 150px)", overflow: "hidden", display: "block", position: "relative", paddingBottom:"90px"} }>
             {products && <Container maxWidth="lg" sx={ { padding: 1 } }>
                 <ProductGrid updateItemCount = {updateItemCount} products={ software } category="Opções Binárias"/>
                 { others.length > 0 && <ProductGrid updateItemCount = {updateItemCount} products={ others } category="Outros" /> }
