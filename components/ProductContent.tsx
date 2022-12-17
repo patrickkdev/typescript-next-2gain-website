@@ -3,8 +3,8 @@ import { Download, ShoppingCart } from "@mui/icons-material";
 import { CreatePayment } from '../utils/MercadoPago/CreatePayment'
 import React from "react";
 
-import GetWindowSize from "../utils/getWindowSize";
-import { shoppingCart } from "../utils/cartData";
+import GetWindowSize from "../utils/GetWindowSize";
+import { shoppingCart } from "../utils/GetCartData";
 import Link from "next/link";
 
 const ProductContent = ({ product, updateItemCount }:{product:any, updateItemCount: Function}) => {
@@ -22,7 +22,7 @@ const ProductContent = ({ product, updateItemCount }:{product:any, updateItemCou
           <Box style={ { justifyContent: "space-between", flex:1, display:"flex", flexDirection:"column"}} >
             <CardContent>
               <div style={ { display: "flex", flexDirection: portrait? "row":"column"} }>
-                <div style={ { display: "flex", flex: 0.5, flexDirection:"column"} }>
+                <div style={ { display: "flex", flex: 1, flexDirection:"column"} }>
                   <Typography variant="h5" fontWeight="bold">
                     { product.attributes.name }
                   </Typography>
@@ -32,7 +32,7 @@ const ProductContent = ({ product, updateItemCount }:{product:any, updateItemCou
 
                 </div>
                 
-                {false &&<div style={ { display: "flex", flex: 0.5, flexDirection: "column" } }>
+                {false &&<div style={ { display: "flex", flex: 1, flexDirection: "column" } }>
                   { product.attributes.precoNormal > 0 ? 
                     <Typography color="#217021" padding={ 0 } align={portrait? "center":"left"} fontWeight="bold" fontStyle="italic">
                       de R$ { product.attributes.precoNormal.toFixed(2) } por:
@@ -62,13 +62,15 @@ const ProductContent = ({ product, updateItemCount }:{product:any, updateItemCou
               
             </CardContent>
           
-            <CardActions sx={ { width:"100%"} }>
-              {product.attributes.downloadLinkPc != null && <Button onClick= {() => window.open(product.attributes.downloadLinkPc, "_blank")} variant="contained" style={ { height: "50px", display: "flex", flex: product.attributes.downloadLinkAndroid == null? 1: 0.5, backgroundColor: "#212121" } } endIcon={ <Download/> }>
-                Baixar grátis no PC
-              </Button>}
-              {product.attributes.downloadLinkAndroid != null && <Button onClick= {() => window.open(product.attributes.downloadLinkAndroid, "_blank")} variant="contained" style={ { backgroundColor:"#103085", height: "50px", display: "flex", flex: product.attributes.downloadLinkPc == null? 1: 0.5 } } endIcon={ <Download/> }> 
-                Baixar grátis no android
-              </Button>}
+            <CardActions sx={ { flexDirection: portrait? "column":"row"} }>
+              {product.attributes.downloadLinkPc != null && 
+                <Button onClick= {() => window.open(product.attributes.downloadLinkPc, "_blank")} variant="contained" style={ { backgroundColor: "#212121", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }>
+                  Baixar grátis no PC
+                </Button>}
+              {product.attributes.downloadLinkAndroid != null && 
+                <Button onClick= {() => window.open(product.attributes.downloadLinkAndroid, "_blank")} variant="contained" style={ { backgroundColor:"#103085", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }> 
+                  Baixar grátis no android
+                </Button>}
             </CardActions>
           </Box>
         </div>

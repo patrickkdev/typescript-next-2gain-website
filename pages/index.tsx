@@ -3,8 +3,8 @@ import React, {useState} from "react";
 import { CssBaseline } from "@mui/material"
 import { _AppBar, Footer, HomeContent, HeroBanner } from '../components'
 
-import BusinessData from '../utils/businessData'
-import { shoppingCart } from '../utils/cartData';
+import BusinessData from '../utils/GetBusinessData'
+import { shoppingCart } from '../utils/GetCartData';
 
 export default function Home() {
   const [cartItems, setCartItems] = useState(shoppingCart.getItems());
@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
 
-    <div style={ { backgroundColor: "#F6F6F6", height: "100%", position: "relative", marginTop: 60 }}>
+    <div style={ { backgroundColor: "#F6F6F6", height: "100%", position: "relative", marginTop: 50 }}>
       
       <CssBaseline />
       

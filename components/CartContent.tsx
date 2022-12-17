@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React, {useState} from 'react'
 
-import GetWindowSize from '../utils/getWindowSize'
-import { shoppingCart } from '../utils/cartData'
+import GetWindowSize from '../utils/GetWindowSize'
+import { shoppingCart } from '../utils/GetCartData'
 import { CreatePayment } from '../utils/MercadoPago/CreatePayment'
 
 import { Button, IconButton, Paper, Typography } from '@mui/material'

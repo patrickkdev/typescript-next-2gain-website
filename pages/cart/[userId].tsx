@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useRouter} from 'next/router'
-import {shoppingCart} from '../../utils/cartData'
-import BusinessData from '../../utils/businessData';
+import {shoppingCart} from '../../utils/GetCartData'
+import BusinessData from '../../utils/GetBusinessData';
 
 import { _AppBar, Footer, CartContent } from '../../components';
 import { CssBaseline } from '@mui/material';

@@ -4,8 +4,8 @@ import {useRouter} from 'next/router'
 import { _AppBar, Footer, ProductContent } from '../../components'
 import { CssBaseline } from "@mui/material"
 
-import BusinessData from '../../utils/businessData';
-import {shoppingCart} from '../../utils/cartData'
+import BusinessData from '../../utils/GetBusinessData';
+import {shoppingCart} from '../../utils/GetCartData'
 
 const Product = () => {
 
@@ -29,7 +29,7 @@ const Product = () => {
     
     return (
 
-        <div style={ { backgroundColor: "#F6F6F6", height:"100%", position:"relative", marginTop: 60 } }>
+        <div style={ { backgroundColor: "#F6F6F6", height:"100%", position:"relative", marginTop: 50 } }>
             <CssBaseline />
 
             <_AppBar itemCount={cartItems?.length}/>

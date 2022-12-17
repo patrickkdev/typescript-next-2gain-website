@@ -3,7 +3,7 @@ import Link from "next/link"
 import {Typography, Grid, Button, Card, Container, CardMedia, CardContent, CardActions} from "@mui/material"
 
 import { Download, ShoppingCart } from "@mui/icons-material";
-import { shoppingCart } from "../utils/cartData";
+import { shoppingCart } from "../utils/GetCartData";
 
 const HomeContent = ({ products, updateItemCount }: { products: [any], updateItemCount: Function }) => {
     
