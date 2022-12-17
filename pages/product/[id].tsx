@@ -29,7 +29,7 @@ const Product = () => {
     
     return (
 
-        <div style={ { backgroundColor: "#F6F6F6", height:"100%", position:"relative", marginTop: 50 } }>
+        <div style={ { backgroundColor: "#F6F6F6", height:"100%", position:"relative", marginTop: 55 } }>
             <CssBaseline />
 
             <_AppBar itemCount={cartItems?.length}/>
