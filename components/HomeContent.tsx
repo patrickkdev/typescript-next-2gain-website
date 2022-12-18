@@ -12,16 +12,19 @@ const HomeContent = ({ products, updateItemCount }: { products: [any], updateIte
 
     if (products) {
         products.forEach(element => {
-            if (element.attributes.category == "Opções Binárias") { software.push(element); }
+            if (element.attributes.category == "Ferramentas") { software.push(element); }
             else { others.push(element); }
         });
     }
 
+    console.log(products)
+    console.log(others)
+
     return (
         <main style={ { minHeight: "calc(100vh - 150px)", overflow: "hidden", display: "block", position: "relative", paddingBottom:"90px"} }>
             {products && <Container maxWidth="lg" sx={ { padding: 1 } }>
-                <ProductGrid updateItemCount = {updateItemCount} products={ software } category="Opções Binárias"/>
-                { others.length > 0 && <ProductGrid updateItemCount = {updateItemCount} products={ others } category="Outros" /> }
+                <ProductGrid updateItemCount = {updateItemCount} products={ software } category="Ferramentas"/>
+                { others.length > 0 && <ProductGrid updateItemCount = {updateItemCount} products={ others } category="Planihas" /> }
             </Container>}
         </main>
     );

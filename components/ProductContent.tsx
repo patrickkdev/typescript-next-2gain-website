@@ -6,6 +6,7 @@ import React from "react";
 import GetWindowSize from "../utils/GetWindowSize";
 import { shoppingCart } from "../utils/GetCartData";
 import Link from "next/link";
+import { stringify } from "querystring";
 
 const ProductContent = ({ product, updateItemCount }:{product:any, updateItemCount: Function}) => {
 
@@ -45,31 +46,26 @@ const ProductContent = ({ product, updateItemCount }:{product:any, updateItemCou
               </div>
                  
               <Typography color="textSecondary" gutterBottom>
-                { product.attributes.description }
+                { product.attributes.description }+ {product.attributes.howItWorks}
               </Typography>
               
-              
-              <a target="_blank" rel = "noopener noreferrer" href="https://www.youtube.com/watch?v=gQIfODxH3jg" style = {{color:"blue"}}>
-                Como funciona?
-              </a>
-            
-              {/* <Typography color="black" fontWeight={"bold"} >
-                Até 7 dias para reembolso
-              </Typography>
-              <Typography color="Black" fontWeight={"bold"} >
-                Parcelado em até 12x via Mercado Pago
-              </Typography> */}
-              
+              <div style={{aspectRatio: 16/9, display: "flex"}}>
+                  {product.attributes.howItWorks != null && <iframe src = {product.attributes.howItWorks} title="tutorial" width="100%" allowFullScreen/>}
+              </div>
             </CardContent>
           
             <CardActions sx={ { flexDirection: portrait? "column":"row"} }>
               {product.attributes.downloadLinkPc != null && 
-                <Button onClick= {() => window.open(product.attributes.downloadLinkPc, "_blank")} variant="contained" style={ { backgroundColor: "#212121", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }>
+                <Button onClick= {() => window.open(product.attributes.downloadLinkPc, "_blank")} variant="contained" style={ { backgroundColor: "black", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }>
                   Baixar grátis no PC
                 </Button>}
               {product.attributes.downloadLinkAndroid != null && 
                 <Button onClick= {() => window.open(product.attributes.downloadLinkAndroid, "_blank")} variant="contained" style={ { backgroundColor:"#103085", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }> 
                   Baixar grátis no android
+                </Button>}
+              {(product.attributes.downloadLinkAndroid == null && product.attributes.downloadLinkPc == null) &&
+                <Button disabled variant="contained" style={ { backgroundColor:"#505050", color:"white", height: "60px", width: "100%", margin: 5 } }> 
+                  Em breve
                 </Button>}
             </CardActions>
           </Box>
