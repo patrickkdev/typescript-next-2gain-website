@@ -3,7 +3,7 @@ import {useRouter} from 'next/router'
 import {shoppingCart} from '../../utils/GetCartData'
 import BusinessData from '../../utils/GetBusinessData';
 
-import { _AppBar, Footer, CartContent } from '../../components';
+import { _AppBar, CartContent } from '../../components';
 import { CssBaseline } from '@mui/material';
 
 const CartPage = () => {

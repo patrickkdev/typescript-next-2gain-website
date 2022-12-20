@@ -25,7 +25,7 @@ const Product = () => {
         return <div>Sem dados</div>;
     }
     
-    const product: any = data?.data.attributes.store_products.data.find((element: any) => element.id == id);
+    const product: any = data.products.find((element: any) => element.id == id);
     
     return (
 
@@ -36,7 +36,7 @@ const Product = () => {
             
             <ProductContent product={ product } updateItemCount = {setCartItems} />
             
-            <Footer data={ data?.data.attributes } />
+            <Footer data={ data } />
         </div>
 
     );

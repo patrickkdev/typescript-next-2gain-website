@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link"
 import {Typography, Grid, Button, Card, Container, CardMedia, CardContent, CardActions} from "@mui/material"
 
-import { Download, ShoppingCart } from "@mui/icons-material";
+import { Download } from "@mui/icons-material";
 import { shoppingCart } from "../utils/GetCartData";
 
 const HomeContent = ({ products, updateItemCount }: { products: [any], updateItemCount: Function }) => {
@@ -12,7 +12,7 @@ const HomeContent = ({ products, updateItemCount }: { products: [any], updateIte
 
     if (products) {
         products.forEach(element => {
-            if (element.attributes.category == "Ferramentas") { software.push(element); }
+            if (element.category == "Ferramentas") { software.push(element); }
             else { others.push(element); }
         });
     }
@@ -42,24 +42,24 @@ const ProductGrid = ({products, category, updateItemCount}:{products: [any], cat
                             <Card elevation={10} sx={{height: "100%", flexDirection: "column"}}>
                                 <Link href={"/product/" + product.id.toString()}>
                                     <CardMedia
-                                        image={ product.attributes.image }
+                                        image={ product.image }
                                         title='Image Title'
                                         style={ {paddingTop: "100%"} }/>
                                 <CardContent>
                                         <div style={{height:90}}>
                                             <Typography gutterBottom variant="h6">
-                                                {product.attributes.name}
+                                                {product.name}
                                             </Typography>
                                             <Typography color="textSecondary">
-                                            { product.attributes.description.substring(0, 55) == product.attributes.description? product.attributes.description : product.attributes.description.substring(0, 55) + "..."}
+                                            { product.description.substring(0, 55) == product.description? product.description : product.description.substring(0, 55) + "..."}
                                             </Typography>
                                         </div>
                                         {false && <div style={{alignSelf:"center", justifySelf:"center"}}>
-                                            { product.attributes.precoNormal > 0 ? <Typography color="#1f6e04" padding={ 0 } variant="h6" align="center" fontWeight="bold" fontStyle="italic">
-                                                de R$ { product.attributes.precoNormal.toFixed(2) } por:
+                                            { product.precoNormal > 0 ? <Typography color="#1f6e04" padding={ 0 } variant="h6" align="center" fontWeight="bold" fontStyle="italic">
+                                                de R$ { product.precoNormal.toFixed(2) } por:
                                             </Typography> : <Typography color="#1f6e04" padding={ 0 } variant="h6" align="center" fontWeight="bold">por apenas:</Typography> }
                                         <Typography color="#1f6e04" variant="h4" align="center" fontWeight="bold" alignSelf="center">
-                                                R$ { product.attributes.precoAtual.toFixed(2)}
+                                                R$ { product.precoAtual.toFixed(2)}
                                             </Typography>
                                         </div>}
                                     </CardContent>

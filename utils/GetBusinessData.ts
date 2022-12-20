@@ -3,10 +3,19 @@ import { dehydrate, QueryClient, useQuery } from 'react-query'
 //release -- ("https://mystrapicms.onrender.com/api/stores/1?populate=*")
 //debug -- ("http://localhost:1337/api/stores/1?populate=*")
 
-const getRestaurantData = async () => await (await fetch("https://mystrapicms.onrender.com/api/stores/1?populate=*")).json().catch((value) => console.log(JSON.stringify(value)));
+const webStoreId = 1;
+
+const getWebStoreData = async () => {
+    const webStore: any = await (await fetch("https://patrickanywhere.pythonanywhere.com/getWebStoreData?id=" + webStoreId.toString())).json();
+    const webStoreProducts: any = await (await fetch ("https://patrickanywhere.pythonanywhere.com/getWebStoreProducts?id=" + webStoreId.toString())).json();
+
+    const result: any = {...webStore[0], products: webStoreProducts};
+    
+    return result;
+}
 
 const BusinessData = () => {
-  const { data, isLoading, isFetching } = useQuery('restaurant', getRestaurantData);
+  const { data, isLoading, isFetching } = useQuery('restaurant', getWebStoreData);
 
   return (
       {data, isLoading, isFetching}
@@ -18,7 +27,7 @@ export default BusinessData
 export async function getStaticProps() {
     const queryClient = new QueryClient();
 
-    await queryClient.prefetchQuery("restaurant", getRestaurantData);
+    await queryClient.prefetchQuery("restaurant", getWebStoreData);
 
     return {
         props: {

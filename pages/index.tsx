@@ -26,11 +26,11 @@ export default function Home() {
       
       <_AppBar itemCount={cartItems?.length}/>
 
-      <HeroBanner url={ data?.data.attributes.banner } name={ data?.data.attributes.name } description={ data?.data.attributes.description }/>
+      <HeroBanner url={ data?.banner } name={ data?.name } description={ data?.description }/>
 
-      <HomeContent products = {data?.data.attributes.store_products.data} updateItemCount = {setCartItems}/>
+      <HomeContent products = {data?.products} updateItemCount = {setCartItems}/>
       
-      <Footer data={ data?.data.attributes } />
+      <Footer data={ data } />
 
     </div>
 
