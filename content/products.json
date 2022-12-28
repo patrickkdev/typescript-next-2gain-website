@@ -55,18 +55,6 @@
             ]
         },
         { 
-            "title": "Sinais",
-            "description": "Com sinais de alta precisão e marcações precisas de zonas de suporte e resistência, o nosso algoritmo lhe dará a vantagem que você precisa para tomar decisões acertadas e maximizar seus lucros. O download é fácil e gratuito, então não perca mais tempo e comece a beneficiar-se da nossa solução de qualidade. Não importa o seu nível de experiência, o nosso algoritmo pode ajudá-lo a alcançar o sucesso no trading de opções binárias. Faça o download agora mesmo e comece a obter resultados consistentes!",
-            "category": "Ferramentas",
-            "imageUrl": "https://indicatorspot.com/wp-content/uploads/2022/08/Trend-Arrow-Indicator_1.png",
-            "videoUrl": "",
-            "downloadLinkPC": "",
-            "downloadLinkIos": "",
-            "downloadLinkAndroid": "",
-            "bestFeatures": [
-            ]
-        },
-        { 
             "title": "Planiha de Juros Compostos",
             "description": "Com a nossa planilha excel gratuita, você pode facilmente realizar cálculos de juros compostos de forma rápida e precisa. Basta inserir os valores iniciais e as taxas de juros para obter o montante final com juros compostos aplicados. Além disso, a planilha também permite que você altere os valores de entrada e visualize como isso afeta o montante final. É uma ferramenta útil para qualquer pessoa que precise calcular juros compostos, seja para fins financeiros pessoais ou profissionais. Faça o download da nossa planilha agora mesmo e comece a usufruir de todas as suas vantagens.",
             "category": "Ferramentas",
@@ -89,6 +77,18 @@
                     "title": "Download gratuito",
                     "subtitle": "A planilha é gratuita e pode ser usada tanto para fins financeiros pessoais quanto profissionais."
                 }
+            ]
+        },
+        { 
+            "title": "Sinais",
+            "description": "Com sinais de alta precisão e marcações precisas de zonas de suporte e resistência, o nosso algoritmo lhe dará a vantagem que você precisa para tomar decisões acertadas e maximizar seus lucros. O download é fácil e gratuito, então não perca mais tempo e comece a beneficiar-se da nossa solução de qualidade. Não importa o seu nível de experiência, o nosso algoritmo pode ajudá-lo a alcançar o sucesso no trading de opções binárias. Faça o download agora mesmo e comece a obter resultados consistentes!",
+            "category": "Ferramentas",
+            "imageUrl": "https://indicatorspot.com/wp-content/uploads/2022/08/Trend-Arrow-Indicator_1.png",
+            "videoUrl": "",
+            "downloadLinkPC": "",
+            "downloadLinkIos": "",
+            "downloadLinkAndroid": "",
+            "bestFeatures": [
             ]
         }
     ]

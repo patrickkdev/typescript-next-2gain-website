@@ -4,7 +4,7 @@ import {Typography, Grid, Button, Card, Container, CardMedia, CardContent, CardA
 
 import { Download } from "@mui/icons-material";
 import { shoppingCart } from "../utils/GetCartData";
-import { Product, ProductModel } from "../content/productModel";
+import { Product } from "../content/productModel";
 
 const HomeContent = ({ products, updateItemCount }: { products: Product[], updateItemCount: Function }) => {
     
