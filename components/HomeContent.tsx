@@ -4,25 +4,29 @@ import {Typography, Grid, Button, Card, Container, CardMedia, CardContent, CardA
 
 import { Download } from "@mui/icons-material";
 import { shoppingCart } from "../utils/GetCartData";
+import { Product, ProductModel } from "../content/productModel";
 
-const HomeContent = ({ products, updateItemCount }: { products: [any], updateItemCount: Function }) => {
+const HomeContent = ({ products, updateItemCount }: { products: Product[], updateItemCount: Function }) => {
     
     var software: any = [];
     var others: any = [];
 
     if (products) {
-        products.forEach(element => {
-            if (element.category == "Ferramentas") { software.push(element); }
-            else { others.push(element); }
+        products.forEach(product => {
+            if (product.category == "Ferramentas") { software.push(product); }
+            else { 
+                others.push(product); 
+            }
         });
     }
 
     console.log(products)
     console.log(others)
 
+
     return (
         <main style={ { minHeight: "calc(100vh - 150px)", overflow: "hidden", display: "block", position: "relative", paddingBottom:"90px"} }>
-            {products && <Container maxWidth="lg" sx={ { padding: 1 } }>
+            {products && <Container maxWidth="lg" sx={ { padding: 1, flex:1, display:"flex", flexDirection: "column" } }>
                 <ProductGrid updateItemCount = {updateItemCount} products={ software } category="Ferramentas"/>
                 { others.length > 0 && <ProductGrid updateItemCount = {updateItemCount} products={ others } category="Planihas" /> }
             </Container>}
@@ -30,42 +34,35 @@ const HomeContent = ({ products, updateItemCount }: { products: [any], updateIte
     );
 };
 
-const ProductGrid = ({products, category, updateItemCount}:{products: [any], category: string, updateItemCount: Function}) => {
+const ProductGrid = ({products, category, updateItemCount}:{products: Product[], category: string, updateItemCount: Function}) => {
+
     return (
         <div>
             <Typography gutterBottom variant="h4" fontWeight="bold" margin={2} color="textPrimary">
                 {category}
             </Typography>            
             <Grid container spacing={ 2 } justifySelf="center" justifyContent="center">
-                { products.map((product: any) => (
-                    <Grid item key={ product.id } xs={ 12 } sm={ 6 } md={ 4 } sx={ { padding: "20px 0" } }>
+                { products.map((product: Product) => (
+                    <Grid item key={ products.indexOf(product) } xs={ 12 } sm={ 6 } md={ 6 } sx={ { padding: "20px 0" } }>
                             <Card elevation={10} sx={{height: "100%", flexDirection: "column"}}>
-                                <Link href={"/product/" + product.id.toString()}>
+                                <Link href={"/product/" + products.indexOf(product).toString()}>
                                     <CardMedia
-                                        image={ product.image }
+                                        image={product.imageUrl}
                                         title='Image Title'
-                                        style={ {paddingTop: "100%"} }/>
+                                        style={{paddingTop: "70%"}}/>
                                 <CardContent>
                                         <div style={{height:90}}>
                                             <Typography gutterBottom variant="h6">
-                                                {product.name}
+                                                {product.title}
                                             </Typography>
                                             <Typography color="textSecondary">
-                                            { product.description.substring(0, 55) == product.description? product.description : product.description.substring(0, 55) + "..."}
+                                                {product.description}
                                             </Typography>
                                         </div>
-                                        {false && <div style={{alignSelf:"center", justifySelf:"center"}}>
-                                            { product.precoNormal > 0 ? <Typography color="#1f6e04" padding={ 0 } variant="h6" align="center" fontWeight="bold" fontStyle="italic">
-                                                de R$ { product.precoNormal.toFixed(2) } por:
-                                            </Typography> : <Typography color="#1f6e04" padding={ 0 } variant="h6" align="center" fontWeight="bold">por apenas:</Typography> }
-                                        <Typography color="#1f6e04" variant="h4" align="center" fontWeight="bold" alignSelf="center">
-                                                R$ { product.precoAtual.toFixed(2)}
-                                            </Typography>
-                                        </div>}
                                     </CardContent>
                                 </Link>     
                                 <CardActions sx={ { paddingTop: 0}}>
-                                    <Button href={"/product/" + product.id.toString()} variant="contained" style={ { margin: 2, height: "60px", display: "flex", flex: 1, backgroundColor: "#215085" } }>Conhecer</Button>
+                                    <Button href={"/product/" + products.indexOf(product).toString()} variant="contained" style={ { margin: 2, height: "60px", display: "flex", flex: 1, backgroundColor: "#215085" } }>Conhecer</Button>
                                     {false && <Button onClick={() => {shoppingCart.add(product, updateItemCount)}} variant="contained" style={ { margin: 2, height: "60px", display: "flex", flex: 1, backgroundColor: "#217021" } } endIcon={ <Download/>}>BAIXAR</Button>}
                                 </CardActions>
                             </Card>

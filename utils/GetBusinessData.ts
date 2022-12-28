@@ -1,3 +1,4 @@
+import { ProductModel } from './../content/productModel';
 import { dehydrate, QueryClient, useQuery } from 'react-query'
 
 //release -- ("https://mystrapicms.onrender.com/api/stores/1?populate=*")
@@ -7,9 +8,8 @@ const webStoreId = 1;
 
 const getWebStoreData = async () => {
     const webStore: any = await (await fetch("https://patrickanywhere.pythonanywhere.com/getWebStoreData?id=" + webStoreId.toString())).json();
-    const webStoreProducts: any = await (await fetch ("https://patrickanywhere.pythonanywhere.com/getWebStoreProducts?id=" + webStoreId.toString())).json();
 
-    const result: any = {...webStore[0], products: webStoreProducts};
+    const result: any = webStore[0];
     
     return result;
 }

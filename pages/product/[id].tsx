@@ -6,6 +6,7 @@ import { CssBaseline } from "@mui/material"
 
 import BusinessData from '../../utils/GetBusinessData';
 import {shoppingCart} from '../../utils/GetCartData'
+import { Product, ProductModel } from '../../content/productModel';
 
 const Product = () => {
 
@@ -14,6 +15,8 @@ const Product = () => {
     const router = useRouter();
     
     const { data, isLoading, isFetching } = BusinessData();
+
+    const listOfProducts: ProductModel = require('../../content/products.json');
     
     const id = router.query.id? parseInt(router.query.id as string, 10) : parseInt("0");
     
@@ -25,7 +28,7 @@ const Product = () => {
         return <div>Sem dados</div>;
     }
     
-    const product: any = data.products.find((element: any) => element.id == id);
+    const product: Product = listOfProducts.products[id];
     
     return (
 
