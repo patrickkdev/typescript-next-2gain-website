@@ -68,7 +68,7 @@ const ProductContent = ({ product, updateItemCount }:{product: Product, updateIt
             {product.videoUrl != "" && <Typography variant="h5" fontWeight="bold">
               Como usar:
             </Typography> }
-            <div style={{width: "100%", height: "auto", aspectRatio: 16/9, display: "flex", padding: "12px"}}>
+            <div style={{width: "100%", height: "100%", aspectRatio: 16/9, display: "flex", padding: "12px"}}>
                 {product.videoUrl != "" && <iframe src = {product.videoUrl} title="tutorial" width="100%" allowFullScreen/>}
             </div>
 
