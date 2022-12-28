@@ -68,18 +68,18 @@ const ProductContent = ({ product, updateItemCount }:{product: Product, updateIt
             {product.videoUrl != "" && <Typography variant="h5" fontWeight="bold">
               Como usar:
             </Typography> }
-            <div style={{aspectRatio: 16/9, display: "flex", padding: "12px"}}>
+            <div style={{width: "100%", height: "auto", aspectRatio: 16/9, display: "flex", padding: "12px"}}>
                 {product.videoUrl != "" && <iframe src = {product.videoUrl} title="tutorial" width="100%" allowFullScreen/>}
             </div>
 
             <div style={{display: "flex"}}>
               {product.downloadLinkPC != "" && 
                 <Button onClick= {() => window.open(product.downloadLinkPC, "_blank")} variant="contained" style={ { backgroundColor: "black", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }>
-                  Baixar grátis no PC
+                  Baixar no PC
                 </Button>}
               {product.downloadLinkAndroid != "" && 
                 <Button onClick= {() => window.open(product.downloadLinkAndroid, "_blank")} variant="contained" style={ { backgroundColor:"#103085", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }> 
-                  Baixar grátis no android
+                  Baixar no Android
                 </Button>}
               {(product.downloadLinkAndroid == "" && product.downloadLinkPC == "") &&
                 <Button disabled variant="contained" style={ { backgroundColor:"#505050", color:"white", height: "60px", width: "100%", margin: 5 } }> 
@@ -87,10 +87,6 @@ const ProductContent = ({ product, updateItemCount }:{product: Product, updateIt
                 </Button>}
             </div>
           </Container>
-          {/* eslint-disable-next-line @next/next/no-img-element*/}
-          {/* <img alt = {product.name} src={ product.image } style={ { maxHeight: "70vh", height: portrait ? "auto" : "100%", objectFit: "contain", maxWidth: "100%" } }/> */}
-
-          
       </div>}
     </>
   );
