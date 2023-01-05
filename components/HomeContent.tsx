@@ -20,10 +20,6 @@ const HomeContent = ({ products, updateItemCount }: { products: Product[], updat
         });
     }
 
-    console.log(products)
-    console.log(others)
-
-
     return (
         <main style={ { minHeight: "calc(100vh - 150px)", overflow: "hidden", display: "block", position: "relative", paddingBottom:"90px"} }>
             {products && <Container maxWidth="lg" sx={ { padding: 1, flex:1, display:"flex", flexDirection: "column" } }>
