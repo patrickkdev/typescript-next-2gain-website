@@ -6,7 +6,7 @@
             "description": "A Calculadora Financeira 2Gain é uma ferramenta que se propõe a minimizar os riscos de capital para os traders de opções binárias. Ela fornece o valor exato para cada operação, de modo que, com apenas duas entradas vencedoras consecutivas, o trader já obtém lucro, mesmo depois de passar por uma série de perdas. Para usá-la, basta escolher o plano de gerenciamento que mais se adequa às suas metas e ao capital disponível para as operações, e seguir as indicações da ferramenta para cada entrada no mercado. Ela foi projetada especialmente para ajudar os traders a se recuperarem de perdas e obter lucros com apenas duas entradas vitoriosas consecutivas, mesmo após uma sequência de prejuízos. Além disso, é fácil de usar e não requer conhecimento técnico, fornecendo cálculos em tempo real baseados em seu saldo e nas operações anteriores, para ajudá-lo a tomar as melhores decisões.",
             "category": "Ferramentas",
             "imageUrl": "../static/images/img-calculadora.png",
-            "videoUrl": "https://www.youtube.com/embed/z8xx8jCqA2A",
+            "videoUrl": "https://www.youtube.com/embed/XTF_BWvg6hk",
             "downloadLinkPC": "../static/downloadable/Calculadora Financeira 2Gain.exe",
             "downloadLinkIos": "",
             "downloadLinkAndroid": "../static/downloadable/Calculadora Financeira 2Gain.apk",
