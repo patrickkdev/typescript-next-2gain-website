@@ -79,7 +79,7 @@ const ProductContent = ({ product, updateItemCount }:{product: Product, updateIt
                 </Button>
               }
               {product.downloadLinkAndroid != "" &&   
-                <Button href={product.downloadLinkAndroid} download={product.title} variant="contained" style={ { backgroundColor:"#103085", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }> 
+                <Button href={product.downloadLinkAndroid} download variant="contained" style={ { backgroundColor:"#103085", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }> 
                   Baixar no Android
                 </Button>
               }
