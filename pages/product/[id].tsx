@@ -8,6 +8,7 @@ import BusinessData from '../../utils/GetBusinessData';
 import {shoppingCart} from '../../utils/GetCartData'
 import { Product, ProductModel } from '../../content/productModel';
 import { Business } from '../../content/businessModel';
+import Head from 'next/head';
 
 const Product = () => {
 
@@ -27,8 +28,13 @@ const Product = () => {
 
         <div style={ { backgroundColor: "#F6F6F6", height:"100%", position:"relative", marginTop: 55 } }>
             <CssBaseline />
-
-            <_AppBar itemCount={cartItems?.length}/>
+            
+            <Head>
+                <title>
+                    2Gain Traders
+                </title>
+                <_AppBar itemCount={cartItems?.length}/>
+            </Head>
             
             <ProductContent product={ product } updateItemCount = {setCartItems} />
             
