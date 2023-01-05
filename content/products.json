@@ -5,11 +5,11 @@
             "title": "Calculadora Financeira",
             "description": "A Calculadora Financeira 2Gain é uma ferramenta que se propõe a minimizar os riscos de capital para os traders de opções binárias. Ela fornece o valor exato para cada operação, de modo que, com apenas duas entradas vencedoras consecutivas, o trader já obtém lucro, mesmo depois de passar por uma série de perdas. Para usá-la, basta escolher o plano de gerenciamento que mais se adequa às suas metas e ao capital disponível para as operações, e seguir as indicações da ferramenta para cada entrada no mercado. Ela foi projetada especialmente para ajudar os traders a se recuperarem de perdas e obter lucros com apenas duas entradas vitoriosas consecutivas, mesmo após uma sequência de prejuízos. Além disso, é fácil de usar e não requer conhecimento técnico, fornecendo cálculos em tempo real baseados em seu saldo e nas operações anteriores, para ajudá-lo a tomar as melhores decisões.",
             "category": "Ferramentas",
-            "imageUrl": "https://iili.io/Hxaqcle.png",
+            "imageUrl": "../static/images/img-calculadora.png",
             "videoUrl": "https://www.youtube.com/embed/z8xx8jCqA2A",
-            "downloadLinkPC": "https://mega.nz/file/xpQxEIBY#FQNrvIOO_DXF0aLa6gATSFDMjzlvClHYUB0YpTGjkjs",
+            "downloadLinkPC": "../static/downloadable/Calculadora Financeira 2Gain.exe",
             "downloadLinkIos": "",
-            "downloadLinkAndroid": "https://mega.nz/file/stpDlRSB#iMg8Ji7MCsQI2InGV9dc3bIpdZxhLuOYlL9CEKQHG5Y",
+            "downloadLinkAndroid": "../static/downloadable/Calculadora Financeira 2Gain.apk",
             "bestFeatures": [
                 {
                     "title": "Fácil de usar e sem necessidade de conhecimento técnico",
@@ -33,9 +33,9 @@
             "title": "Robô Trader",
             "description": "Nosso robô trader de opções binárias é uma ferramenta poderosa e intuitiva que realiza análises de price action em tempo real e executa entradas automáticas na corretora IQ Option. Com uma estratégia proprietária e sinais programáveis manualmente, o robô permite que você aproveite o mercado de opções binárias de maneira eficiente e precisa. Além disso, o robô gerencia os valores das entradas de forma conservadora, permitindo que você obtenha lucros sempre que ele acerta duas entradas seguidas, mesmo após uma sequência de perdas. Baixe agora e experimente nossa ferramenta de trading de opções binárias de graça.",
             "category": "Ferramentas",
-            "imageUrl": "https://iili.io/Hxa2Wep.png",
+            "imageUrl": "../static/images/img-robo.png",
             "videoUrl": "https://www.youtube.com/embed/TWAuKHZlnb4",
-            "downloadLinkPC": "https://mega.nz/file/954RzZ5C#P4xuOAZZOtDgE1BTFqICCfzfohFrzQmM5RmPZ46sElc",
+            "downloadLinkPC": "../static/downloadable/Robo Trader 2Gain.exe",
             "downloadLinkIos": "",
             "downloadLinkAndroid": "",
             "bestFeatures": [
@@ -58,11 +58,11 @@
             "title": "Planiha de Juros Compostos",
             "description": "Com a nossa planilha excel gratuita, você pode facilmente realizar cálculos de juros compostos de forma rápida e precisa. Basta inserir os valores iniciais e as taxas de juros para obter o montante final com juros compostos aplicados. Além disso, a planilha também permite que você altere os valores de entrada e visualize como isso afeta o montante final. É uma ferramenta útil para qualquer pessoa que precise calcular juros compostos, seja para fins financeiros pessoais ou profissionais. Faça o download da nossa planilha agora mesmo e comece a usufruir de todas as suas vantagens.",
             "category": "Ferramentas",
-            "imageUrl": "https://iili.io/HxazE5F.png",
+            "imageUrl": "../static/images/img-planilha.png",
             "videoUrl": "https://www.youtube.com/embed/z8xx8jCqA2A",
-            "downloadLinkPC": "https://mega.nz/file/xpQxEIBY#FQNrvIOO_DXF0aLa6gATSFDMjzlvClHYUB0YpTGjkjs",
+            "downloadLinkPC": "../static/downloadable/Planilha Juros Compostos.xlsx",
             "downloadLinkIos": "",
-            "downloadLinkAndroid": "https://mega.nz/file/stpDlRSB#iMg8Ji7MCsQI2InGV9dc3bIpdZxhLuOYlL9CEKQHG5Y",
+            "downloadLinkAndroid": "../static/downloadable/Planilha Juros Compostos.xlsx",
             "bestFeatures": 
             [
                 {
@@ -83,7 +83,7 @@
             "title": "Sinais",
             "description": "Com sinais de alta precisão e marcações precisas de zonas de suporte e resistência, o nosso algoritmo lhe dará a vantagem que você precisa para tomar decisões acertadas e maximizar seus lucros. O download é fácil e gratuito, então não perca mais tempo e comece a beneficiar-se da nossa solução de qualidade. Não importa o seu nível de experiência, o nosso algoritmo pode ajudá-lo a alcançar o sucesso no trading de opções binárias. Faça o download agora mesmo e comece a obter resultados consistentes!",
             "category": "Ferramentas",
-            "imageUrl": "https://indicatorspot.com/wp-content/uploads/2022/08/Trend-Arrow-Indicator_1.png",
+            "imageUrl": "../static/images/img-sinais.png",
             "videoUrl": "",
             "downloadLinkPC": "",
             "downloadLinkIos": "",

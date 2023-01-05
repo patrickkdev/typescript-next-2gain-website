@@ -7,6 +7,7 @@ import { CssBaseline } from "@mui/material"
 import BusinessData from '../../utils/GetBusinessData';
 import {shoppingCart} from '../../utils/GetCartData'
 import { Product, ProductModel } from '../../content/productModel';
+import { Business } from '../../content/businessModel';
 
 const Product = () => {
 
@@ -14,19 +15,11 @@ const Product = () => {
     
     const router = useRouter();
     
-    const { data, isLoading, isFetching } = BusinessData();
+    const data: Business = require('../../content/business.json')
 
     const listOfProducts: ProductModel = require('../../content/products.json');
     
     const id = router.query.id? parseInt(router.query.id as string, 10) : parseInt("0");
-    
-    if (isLoading || router.query.id == undefined) {
-        return <div>Carregando...</div>;
-    }
-    
-    if (!data) {
-        return <div>Sem dados</div>;
-    }
     
     const product: Product = listOfProducts.products[id];
     

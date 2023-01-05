@@ -3,23 +3,16 @@ import React, {useState} from "react";
 import { CssBaseline } from "@mui/material"
 import { _AppBar, Footer, HomeContent, HeroBanner } from '../components'
 
-import BusinessData from '../utils/GetBusinessData'
 import { shoppingCart } from '../utils/GetCartData';
 import { ProductModel } from "../content/productModel";
+import { Business } from "../content/businessModel";
 
 export default function Home() {
   const [cartItems, setCartItems] = useState(shoppingCart.getItems());
-  const { data, isLoading, isFetching } = BusinessData();
+  
+  const data: Business = require('../content/business.json')
 
   const listOfProducts: ProductModel = require('../content/products.json');
-
-  if (isLoading){
-    return <div>Carregando...</div>;
-  }
-  
-  if (!data){
-    return <div>Sem dados</div>;
-  }
 
   return (
 

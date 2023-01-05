@@ -68,23 +68,26 @@ const ProductContent = ({ product, updateItemCount }:{product: Product, updateIt
             {product.videoUrl != "" && <Typography variant="h5" fontWeight="bold">
               Como usar:
             </Typography> }
-            <div style={{width: "100%", height: "auto", aspectRatio: 16/9, display: "flex", padding: "12px"}}>
-                {product.videoUrl != "" && <iframe src = {product.videoUrl} title="tutorial" width="100%" allowFullScreen/>}
+            <div style={{position:"relative", paddingBottom: "56.25%"}}>
+                {product.videoUrl != "" && <iframe src = {product.videoUrl} title="tutorial" style={{position:"absolute", top: 0, left:0}} width="100%" height= "100%" allowFullScreen/>}
             </div>
 
             <div style={{display: "flex"}}>
               {product.downloadLinkPC != "" && 
-                <Button onClick= {() => window.open(product.downloadLinkPC, "_blank")} variant="contained" style={ { backgroundColor: "black", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }>
+                <Button href={product.downloadLinkPC} download variant="contained" style={ { backgroundColor: "black", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }>
                   Baixar no PC
-                </Button>}
-              {product.downloadLinkAndroid != "" && 
-                <Button onClick= {() => window.open(product.downloadLinkAndroid, "_blank")} variant="contained" style={ { backgroundColor:"#103085", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }> 
+                </Button>
+              }
+              {product.downloadLinkAndroid != "" &&   
+                <Button href={product.downloadLinkAndroid} download={product.title} variant="contained" style={ { backgroundColor:"#103085", height: "60px", width: "100%", margin: 5 } } endIcon={ <Download/> }> 
                   Baixar no Android
-                </Button>}
+                </Button>
+              }
               {(product.downloadLinkAndroid == "" && product.downloadLinkPC == "") &&
                 <Button disabled variant="contained" style={ { backgroundColor:"#505050", color:"white", height: "60px", width: "100%", margin: 5 } }> 
                   Em breve
-                </Button>}
+                </Button>
+              }
             </div>
           </Container>
       </div>}
