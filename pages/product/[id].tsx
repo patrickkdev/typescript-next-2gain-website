@@ -4,7 +4,6 @@ import {useRouter} from 'next/router'
 import { _AppBar, Footer, ProductContent } from '../../components'
 import { CssBaseline } from "@mui/material"
 
-import BusinessData from '../../utils/GetBusinessData';
 import {shoppingCart} from '../../utils/GetCartData'
 import { Product, ProductModel } from '../../content/productModel';
 import { Business } from '../../content/businessModel';

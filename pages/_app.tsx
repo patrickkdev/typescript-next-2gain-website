@@ -4,7 +4,6 @@ import type { AppProps } from 'next/app'
 
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 
-
 export default function App({ Component, pageProps }: AppProps) {
   const queryClient = React.useRef(new QueryClient());
 

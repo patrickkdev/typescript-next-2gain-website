@@ -1,4 +1,3 @@
-import { ProductModel } from './../content/productModel';
 import { dehydrate, QueryClient, useQuery } from 'react-query'
 
 //release -- ("https://mystrapicms.onrender.com/api/stores/1?populate=*")
