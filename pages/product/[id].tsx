@@ -32,8 +32,9 @@ const Product = () => {
                 <title>
                     2Gain Traders
                 </title>
-                <_AppBar itemCount={cartItems?.length}/>
             </Head>
+            
+            <_AppBar itemCount={cartItems?.length}/>
             
             <ProductContent product={ product } updateItemCount = {setCartItems} />
             

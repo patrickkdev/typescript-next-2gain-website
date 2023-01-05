@@ -24,9 +24,11 @@ export default function Home() {
         <title>
           2Gain Traders
         </title>
-        <_AppBar itemCount={cartItems?.length}/>
-        <HeroBanner url={ data?.banner } name={ data?.name } description={ data?.description }/>
       </Head>
+
+      <_AppBar itemCount={cartItems?.length}/>
+      <HeroBanner url={ data?.banner } name={ data?.name } description={ data?.description }/>
+      
       <HomeContent products = {listOfProducts.products} updateItemCount = {setCartItems}/>
       
       <Footer data={ data } />
